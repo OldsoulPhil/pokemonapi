@@ -5,7 +5,7 @@ const aToZ = document.querySelector('#aToZ');
 const zToA = document.querySelector('#zToA');
 
 const fetchPokemon = async () => {
-  const url = `https://pokeapi.co/api/v2/pokemon?limit=30`;
+  const url = `https://pokeapi.co/api/v2/pokemon?limit=150`;
   const res = await fetch(url);
   const data = await res.json();
   const pokemon = data.results.map(async (result, index) => {
@@ -82,3 +82,4 @@ arr.forEach((item) => {
 });
 
 fetchPokemon();
+
